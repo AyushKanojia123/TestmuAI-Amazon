@@ -33,23 +33,14 @@ Both tests run in parallel and handle real-world scenarios like dynamic UI chang
 TestmuAI-Amazon/
 │
 ├── tests/
-│   └── amazon.spec.js        # Test cases (iPhone & Galaxy)
+│   └── amazon.spec.js
 │
 ├── pages/
-│   └── amazonPage.js         # Page Object Model (all reusable actions)
+│   └── amazonPage.js
 │
-├── playwright.config.js      # Playwright configuration (parallel, timeout, etc.)
-│
-├── package.json             # Project dependencies & scripts
-├── package-lock.json        # Dependency lock file
-│
-├── node_modules/            # Installed packages (ignored in Git)
-│
-├── test-results/            # Test artifacts (screenshots, videos)
-├── playwright-report/       # HTML test report
-│
-├── .gitignore               # Files ignored by Git
-├── README.md                # Project documentation
+├── playwright.config.js
+├── package.json
+├── README.md
 
 ---
 
