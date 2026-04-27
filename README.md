@@ -30,20 +30,26 @@ Both tests run in parallel and handle real-world scenarios like dynamic UI chang
 - 🎥 Screenshot and video capture on failure
 
 ---
-
-## 📁 Project Structure
-
-testmu-amazon-automation/
+TestmuAI-Amazon/
 │
 ├── tests/
-│ └── amazon.spec.js # Test cases
+│   └── amazon.spec.js        # Test cases (iPhone & Galaxy)
 │
 ├── pages/
-│ └── amazonPage.js # Page Object Model (POM)
+│   └── amazonPage.js         # Page Object Model (all reusable actions)
 │
-├── playwright.config.js # Playwright configuration
-├── package.json
-└── README.md
+├── playwright.config.js      # Playwright configuration (parallel, timeout, etc.)
+│
+├── package.json             # Project dependencies & scripts
+├── package-lock.json        # Dependency lock file
+│
+├── node_modules/            # Installed packages (ignored in Git)
+│
+├── test-results/            # Test artifacts (screenshots, videos)
+├── playwright-report/       # HTML test report
+│
+├── .gitignore               # Files ignored by Git
+├── README.md                # Project documentation
 
 ---
 
