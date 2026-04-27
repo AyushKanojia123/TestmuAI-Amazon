@@ -17,7 +17,6 @@ class AmazonPage {
 
   await this.page.waitForSelector(this.productLinks, { timeout: 15000 });
 
-  // ✅ ADD HERE (important)
   await this.page.waitForTimeout(2000);
 }
 
@@ -29,7 +28,6 @@ class AmazonPage {
 
   await newPage.waitForLoadState('domcontentloaded');
 
-  // ✅ IMPORTANT: prevent long hangs
   await newPage.waitForTimeout(2000);
 
   let price = "Not Found";
@@ -46,7 +44,7 @@ class AmazonPage {
 
  async addToCart(page) {
   try {
-    // Try quickly, don't wait long
+  
     await page.waitForSelector(this.addToCartBtn, { timeout: 3000 });
 
     const addBtn = page.locator(this.addToCartBtn).first();

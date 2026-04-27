@@ -13,14 +13,13 @@ test.describe.parallel('Amazon Automation Tests', () => {
 
     console.log(`iPhone Price: ${price}`);
 
-    // ✅ reduce internal waits
     await newPage.setDefaultTimeout(5000);
 
     await amazon.addToCart(newPage);
 
     await expect(newPage).toBeTruthy();
 
-    // 🔥 CRITICAL FIX (same as Galaxy)
+
     await newPage.close({ runBeforeUnload: true });
   });
 
@@ -35,14 +34,14 @@ test.describe.parallel('Amazon Automation Tests', () => {
 
     console.log(`Galaxy Price: ${price}`);
 
-    // ✅ reduce internal waits
+   
     await newPage.setDefaultTimeout(5000);
 
     await amazon.addToCart(newPage);
 
     await expect(newPage).toBeTruthy();
 
-    // 🔥 CRITICAL FIX
+    
     await newPage.close({ runBeforeUnload: true });
   });
 
